@@ -260,6 +260,7 @@ server <- function(input, output){
     
   # make cumulative discovery curve bars
   id_logInput <- reactive({
+    
     uifilters(id_log, input) |>
       # finding matches by only the values which appear for the first time (not duplicated) are TRUE, otherwise FALSE
       mutate(newid = !duplicated(id)) |> 
