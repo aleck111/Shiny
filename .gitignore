@@ -5,8 +5,7 @@
 .DS_Store
 .quarto
 
-shiny.qmd
-shiny.html
+shiny.*
 sightings.R
 map.R
 ais_tracks.R
