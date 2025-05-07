@@ -41,7 +41,6 @@ ui <- navbarPage(
                                             "Whale Safari" = "Whale Safari"))),
         
         mainPanel(
-          
           fluidPage(
             # map
             leafletOutput("map"),
