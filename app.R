@@ -199,13 +199,9 @@ server <- function(input, output){
       scale_y_continuous(name = "Number of sighting days",
                          sec.axis = sec_axis(~.*1, 
                                              name = "Distance (1,000 km)")) +
-      scale_colour_manual(values = c("magenta",
-                                     "lightgrey",
-                                     "grey40"),
-                         label = c("Risso's dolphin",
-                                   "Whale Safari",
-                                   "Whale2Sea"
-                                   )) +
+      scale_colour_manual(values = c("Risso's dolphin" = "magenta",
+                                     "Whale2Sea" = "grey40",
+                                     "Whale Safari" = "lightgrey")) +
       theme_bw(base_size = 18) +
       theme(legend.position = "bottom",
             axis.text.x = element_text(angle = 90))
