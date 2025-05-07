@@ -5,8 +5,9 @@
 .DS_Store
 .quarto
 
-!shiny.qmd
-!sightings.R
-!map.R
-!ais_tracks.R
-
+shiny.qmd
+shiny.html
+sightings.R
+map.R
+ais_tracks.R
+aufgabenstellung.R
