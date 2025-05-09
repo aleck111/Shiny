@@ -1,0 +1,13 @@
+name: AndenesWhales
+title: AndenesWhales
+username: andenes-whales
+account: andenes-whales
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14705970
+bundleId: 10247549
+url: https://andenes-whales.shinyapps.io/AndenesWhales/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: ais_tracks.R|aufgabenstellung.R|map.R|quarto_app.html|quarto_app.qmd|shiny_cache/revealjs/__packages|shiny_cache/revealjs/gganimate_50841b6e3945ae17bd2b8dca6540aadc.RData|shiny_cache/revealjs/gganimate_50841b6e3945ae17bd2b8dca6540aadc.rdb|shiny_cache/revealjs/gganimate_50841b6e3945ae17bd2b8dca6540aadc.rdx|sightings.R
