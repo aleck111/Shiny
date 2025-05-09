@@ -157,12 +157,20 @@ server <- function(input, output){
   # Card 1: map output
   output$map <- renderLeaflet({
     
+    pal_ais <- colorFactor(palette = c("Whale2Sea" = "darkgrey",
+                                       "Whale Safari" = "lightgrey"),
+                           levels = c("Whale2Sea", "Whale Safari"))
+    
+    pal_species <- colorFactor(palette = c("Risso's dolphin" = "magenta",
+                                           "Pilot whale" = "orange"),
+                               levels = c("Risso's dolphin", "Pilot whale"))
+    
     # plot map                               
     leaflet() |>
       addTiles() |>
       addPolylines(data = aisInput(),
                    weight = 1,
-                   color = "darkgrey") |>
+                   color = ~pal_ais(platform)) |>
       addCircleMarkers(data = sightingsInput(),
                        ~long_dec, 
                        ~lat_dec, 
@@ -171,7 +179,7 @@ server <- function(input, output){
                                       "<strong> Date: </strong>", date, 
                                       "<br>", 
                                       "<strong> Platform: </strong>", platform),
-                       color = "magenta",
+                       color = ~pal_species(species),
                        radius = 0.4) |>
       setView( lng = 16, lat = 69.5, zoom = 6 ) |>
       addProviderTiles("Esri.WorldImagery")})
