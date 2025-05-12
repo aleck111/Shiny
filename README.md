@@ -38,4 +38,7 @@ double-identifications. ±45° uses only photos taken from a right angle
 ±45° in the identification process. High quality and distinctiveness
 uses only photos of high quality and very distinctive individuals.
 
-#### Contact: <eckerle.alex@gmail.com>
+### Photo-identification catalogue available under:
+https://doi.org/10.5281/zenodo.15384625
+
+##### Contact: <eckerle.alex@gmail.com>
