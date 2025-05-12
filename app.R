@@ -90,7 +90,9 @@ ui <- navbarPage(
             # Value Box 2
             valueBoxOutput(outputId = "box_2", width = 6),
             
-            plotOutput("cdc"))))))
+            plotOutput("cdc")
+            
+            textOutput("doi"))))))
   )
 
 # Server ------
@@ -337,6 +339,10 @@ server <- function(input, output){
       labs(x = "Year", 
            y = "Identified individuals") 
   })
+  
+  output$doi <- renderText({
+    paste("Photo-identification catalogue available under:", 
+          "https://doi.org/10.5281/zenodo.15384625")})
 
 }
 
