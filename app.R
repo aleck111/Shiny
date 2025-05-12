@@ -90,7 +90,7 @@ ui <- navbarPage(
             # Value Box 2
             valueBoxOutput(outputId = "box_2", width = 6),
             
-            plotOutput("cdc")
+            plotOutput("cdc"),
             
             textOutput("doi"))))))
   )
