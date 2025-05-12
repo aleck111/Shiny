@@ -92,7 +92,15 @@ ui <- navbarPage(
             
             plotOutput("cdc"),
             
-            textOutput("doi"))))))
+            br(),
+            br(),
+            br(),
+            br(),
+            br(),
+            br(),
+            
+            tags$a(href = "https://doi.org/10.5281/zenodo.15384625", 
+                   "Norwegian Risso's dolphin photo-identification catalogue"))))))
   )
 
 # Server ------
@@ -339,10 +347,6 @@ server <- function(input, output){
       labs(x = "Year", 
            y = "Identified individuals") 
   })
-  
-  output$doi <- renderText({
-    paste("Photo-identification catalogue available under:", 
-          "https://doi.org/10.5281/zenodo.15384625")})
 
 }
 
