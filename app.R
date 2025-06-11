@@ -244,8 +244,8 @@ server <- function(input, output){
     clean_names() |>
     mutate(bodyside = ifelse(angle_0_to_360 >= 90 & 
                                angle_0_to_360 <= 270,
-                             "right",
-                             "left"),
+                             "left",
+                             "right"),
           angle = ifelse(angle_0_to_360 >= 0 &
                             angle_0_to_360 <= 45 |
                           angle_0_to_360 >= 130 &
@@ -332,6 +332,13 @@ server <- function(input, output){
     # Cumulative discovery curve    
     ggplot() +
       geom_bar(data = id_logInput(), aes(x = year, fill = newid)) +
+      stat_count(data = id_logInput(),
+                 geom = "text",
+                 aes(x = year,
+                     fill = newid,
+                     label = ..count..),
+                 position = "stack",
+                 vjust = -0.5) +
       scale_fill_manual(values = c("dodgerblue1", "dodgerblue4")) +
       geom_line(data = id_totalInput(), 
                 aes(x = year, y = total_ids, colour = "Total")) +
